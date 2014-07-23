@@ -4,7 +4,7 @@ danzhu.github.io
 Purpose
 -------
 
-This repository is for my [personal website](danielzhu.tk).
+This repository is for my [personal website](http://danielzhu.tk/).
 
 Contribute
 ----------
