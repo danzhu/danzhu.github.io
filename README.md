@@ -1,12 +1,4 @@
 danzhu.github.io
 ================
 
-Purpose
--------
-
-This repository is for my [personal website](http://danielzhu.tk/).
-
-Contribute
-----------
-
-If you feel that you can make the site look better, don't hesitate to fork it and send a pull request!
+This repository is the source of the main website. Visit [Daniel Zhu's Toolkit](http://danielzhu.tk/) for more information.
