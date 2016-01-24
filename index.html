@@ -11,6 +11,13 @@
             padding-top: 30px;
         }
 
+        .code-wrap {
+            overflow: auto;
+            -ms-word-wrap: normal;
+            word-wrap: normal;
+            white-space: pre;
+        }
+
         .picture {
             height: 300px;
             background-size: cover;
@@ -141,7 +148,7 @@
                     </p>
                 </div>
                 <div class="col-md-5 col-md-pull-7">
-                    <pre><span class="command">#ifndef</span> <span class="macro">MYSELF</span>
+                    <pre class="code-wrap"><span class="command">#ifndef</span> <span class="macro">MYSELF</span>
 <span class="keyword">public class</span> <span class="class">Me</span> <span class="keyword">implements</span> <span class="class">Designer</span>, <span class="class">Developer</span> {
     <span class="keyword">int</span> main(<span class="keyword">int</span> <span class="arg">argc</span>, <span class="keyword">const char</span> *<span class="arg">argv</span>[]) {
         <span class="keyword">while</span> self.Capable:
