@@ -1,94 +1,231 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>H. Daniel Zhu</title>
+    <link rel="stylesheet" href="css/darkly.css" />
+    <style>
+        body {
+            padding-top: 30px;
+        }
 
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+        .picture {
+            height: 300px;
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed;
+        }
 
-    <title>Daniel Zhu&#39;s Toolkit by danzhu</title>
-  </head>
+        section {
+            padding: 50px 0;
+        }
 
-  <body>
-    <header>
-      <div class="inner">
-        <h1>Daniel Zhu&#39;s Toolkit</h1>
-        <h2>My open-sourced projects</h2>
-        <a href="https://github.com/danzhu" class="button"><small>Follow me on</small> GitHub</a>
-      </div>
+        .command {
+            color: gray;
+        }
+        .macro {
+            color: purple;
+        }
+        .keyword {
+            color: blue;
+        }
+        .class {
+            color: steelblue;
+        }
+        .arg {
+            color: gray;
+        }
+        
+        @media print {
+            .picture {
+                display: none;
+            }
+
+            section {
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#home">H. Daniel Zhu</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="page-scroll"><a href="#about">About</a></li>
+                    <li class="page-scroll"><a href="#skills">Skills</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            Projects
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="https://github.com/danzhu">GitHub</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="https://github.com/danzhu/launcher">launcher</a></li>
+                            <li><a href="https://github.com/danzhu/JoyfulColours">JoyfulColours</a></li>
+                            <li><a href="https://github.com/danzhu/birthland">birthland</a></li>
+                            <li><a href="https://github.com/danzhu/RawScript">RawScript</a></li>
+                            <li><a href="https://github.com/danzhu/RPG">RPG</a></li>
+                            <li><a href="https://github.com/danzhu/square.js">square.js</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header id="home">
+        <div class="jumbotron">
+            <div class="container">
+                <h1 class="text-center">Hongjian Daniel Zhu</h1>
+                <h2 class="text-center">Software Developer / Architect. <small>Since the age of 11.</small></h2>
+            </div>
+        </div>
     </header>
-
-    <div id="content-wrapper">
-      <div class="inner clearfix">
-        <section id="main-content">
-          <h1>
-<a id="daniel-zhus-toolkit" class="anchor" href="#daniel-zhus-toolkit" aria-hidden="true"><span class="octicon octicon-link"></span></a>Daniel Zhu's Toolkit</h1>
-
-<h2>
-<a id="notice" class="anchor" href="#notice" aria-hidden="true"><span class="octicon octicon-link"></span></a>Notice</h2>
-
-<p>I'm now studying in University of Waterloo so I won't update my projects a lot. Sorry if you are eager to see my projects - in which I'll be developing them when I finally get free time (either when I finished my homework - or when I start my co-op jobs). I would love to keep developing, and even collaborating with other developers, but I'm currently really, really busy.</p>
-
-<h2>
-<a id="projects" class="anchor" href="#projects" aria-hidden="true"><span class="octicon octicon-link"></span></a>Projects</h2>
-
-<p>Since github is for open source, the source code for all my projects below can be found on my github page.</p>
-
-<h3>
-<a id="squarejs" class="anchor" href="#squarejs" aria-hidden="true"><span class="octicon octicon-link"></span></a>square.js</h3>
-
-<p><strong>State: Abandoned</strong> - it was an old project and I found it inefficient to make a game engine in <code>JavaScript</code>.</p>
-
-<p>A square-based game engine targeted at both traditional board games and RPG. An example of Chess using this game engine can be found on the <a href="http://danielzhu.tk/square.js">project page</a>.</p>
-
-<h3>
-<a id="rawscript" class="anchor" href="#rawscript" aria-hidden="true"><span class="octicon octicon-link"></span></a>RawScript</h3>
-
-<p><strong>State: Abandoned</strong> - badly structured and too complex, so won't be able to continue developing.</p>
-
-<p>A primitive but flexible little interpreter with support of customized scripting language.</p>
-
-<h3>
-<a id="joyfulcolours" class="anchor" href="#joyfulcolours" aria-hidden="true"><span class="octicon octicon-link"></span></a>JoyfulColours</h3>
-
-<p><strong>State: Suspended</strong> - until I find an alternate 3D engine, this game engine is way too slow using .NET's <code>Viewport3D</code>.</p>
-
-<p>My biggest project yet - a 3D game engine written in <code>C#</code> that supports a variety of features. More descriptions available on github.</p>
-
-<p>It was made out of scratch (well, with the support of .NET library), so complex features are not possible until I learn about them in other game engines (mainly Unity Engine) or about the algorithms concerning 3D rigging, etc.</p>
-
-<h3>
-<a id="birthland" class="anchor" href="#birthland" aria-hidden="true"><span class="octicon octicon-link"></span></a>Birthland</h3>
-
-<p><strong>State: Completed</strong> - no longer in development. Future text adventure games will utilize a new engine.</p>
-
-<p>A small text adventure game made as a birthday gift for my girlfriend Joy. It was written within about a week, so some features for more complex games are missing. The story <em>might</em> continue - I'm not sure if I will be writing a brand new story or what - but the engine itself is lacking features.</p>
-
-<p>Note that the progress will <em>not</em> be saved. The game is short, and designed to be replayed, since it is really short, but your choices (especially your character) will affect the story and the ending.</p>
-
-<p>I haven't uploaded the complete version, since it contains a private letter that I don't want to make public, and a 10M music file which is too big for an online version. The game without the extras can be played <a href="http://danielzhu.tk/birthland">directly online</a>. </p>
-
-<h3>
-<a id="what-about-the-other-projects" class="anchor" href="#what-about-the-other-projects" aria-hidden="true"><span class="octicon octicon-link"></span></a>What about the other projects?</h3>
-
-<p>Will be deleted soon - they are just temperarily here (for various reasons).</p>
-        </section>
-
-        <aside id="sidebar">
-
-
-          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
-        </aside>
-      </div>
-    </div>
-
-  
-  </body>
+    <section id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <h2>About</h2>
+                    <p class="lead">
+                        Pursuing my studies for Bachelor of Computer Science in University of Waterloo, I love challenges and am always eager to learn and expand my skills. Being a hardcore software developer / architect, one of the greatest pleasures in my life is designing, implementing, and testing software, as well as discovering and mastering new languages, frameworks, and other fascinating and powerful tools.
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <h3>Information</h3>
+                    <table class="table">
+                        <tr>
+                            <td>Education</td>
+                            <td>Student at University of Waterloo</td>
+                        </tr>
+                        <tr>
+                            <td>Major</td>
+                            <td>Computer Science</td>
+                        </tr>
+                        <tr>
+                            <td>Expertise</td>
+                            <td>C#, C++, JavaScript</td>
+                        </tr>
+                        <tr>
+                            <td>Languages</td>
+                            <td>English, Mandarin</td>
+                        </tr>
+                        <tr>
+                            <td>Interests</td>
+                            <td>Software, Piano, Poetry</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="picture" style="background-image: url(images/1.jpg);"></div>
+    <section id="skills">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7 col-md-push-5">
+                    <h2>Skills</h2>
+                    <p>
+                        As a .NET / Graphics / Web Developer, I am proficient in developing both desktop and web applications, as well as front-end and back-end software. With expertise in <strong>C#</strong>, <strong>C++</strong> and <strong>JavaScript</strong>, proficiency in <strong>C</strong>, <strong>Java</strong>, <strong>Python</strong>, <strong>HTML</strong>, <strong>CSS</strong>, <strong>XML</strong> and <strong>JSON</strong>, and knowledge in 10+ other languages and frameworks, it is fast and easy for me to pick up any new programming languages and frameworks when needed.
+                    </p>
+                </div>
+                <div class="col-md-5 col-md-pull-7">
+                    <pre><span class="command">#ifndef</span> <span class="macro">MYSELF</span>
+<span class="keyword">public class</span> <span class="class">Me</span> <span class="keyword">implements</span> <span class="class">Designer</span>, <span class="class">Developer</span> {
+    <span class="keyword">int</span> main(<span class="keyword">int</span> <span class="arg">argc</span>, <span class="keyword">const char</span> *<span class="arg">argv</span>[]) {
+        <span class="keyword">while</span> self.Capable:
+            requestTask(<span class="keyword">function</span> (<span class="arg">task</span>) {
+                <span class="class">nonstd</span>::complete(<span class="arg">task</span>);
+            });
+    }
+    <span class="keyword">bool</span> Capable =&gt; <span class="keyword">true</span>;
+}
+<span class="command">#endif</span></pre>
+                </div>
+            </div>
+            <hr />
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>C#</h3>
+                    <p>
+                        As a high-level language that comes with a huge standard library and one of the best IDEs, this language led me into the wonderful world of software development. Being my first programming language, I have <strong>7 years</strong> of experience in C# and wrote numerous projects. I have developed applications using <strong>WinForms</strong> and <strong>WPF</strong>, made web applications in <strong>ASP.NET</strong>, and have extensively used various tools in the <strong>.NET Library</strong>. Recently I also embedded <strong>IronPython</strong> into a lot of my projects for extensibility and plug-in support.
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <h3>C++</h3>
+                    <p>
+                        A software developer will surely have heard about C / C++, if not learned or mastered the language. I have used C++ for <strong>4 years</strong>, learned all about the compiling process, and developed quite a lot of projects in C++. Since I am always passionate about the ways programs work fundamentally, I have been working on a language interpreter in C++, and have decent knowledge in <strong>Standard Template Library</strong> and <strong>WinAPI</strong>.
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <h3>JavaScript</h3>
+                    <p>
+                        The internet is growing faster and faster, and now web technologies are becoming a huge part of application development. I started to explore the code behind the web <strong>4 years</strong> ago, loved the flexibility and portability ever since, and wrote a wide range of utilities and frameworks. I worked with both the back-end, with frameworks such as <strong>Express</strong> on <strong>node.js</strong>, and the front-end with <strong>jQuery</strong> and <strong>Bootstrap</strong>.
+                    </p>
+                </div>
+            </div>
+            <hr />
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Development Environments</h3>
+                    <p>
+                        A good developer needs a good blaster... no I mean development environment at his / her side. Even though good old notepad and cat can be useful at times, it is often more efficient to use and IDE / text editor. I have experience and am comfortable with:
+                    </p>
+                    <ul>
+                        <li>Microsoft Visual Studio</li>
+                        <li>Vim</li>
+                        <li>Eclipse</li>
+                        <li>Sublime Text</li>
+                    </ul>
+                    <p>
+                        ... and definitely willing to learn more!
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <h3>Tools</h3>
+                    <p>
+                        Aside from IDEs, other tools can be quite useful as well. I have used these tools extensively, and know their roles and capability as well:
+                    </p>
+                    <ul>
+                        <li>Unix Shell</li>
+                        <li>Windows Command Line</li>
+                        <li>Git</li>
+                        <li>Microsoft Office</li>
+                        <li>Browser Development Tools</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="picture" style="background-image: url(images/2.jpg);"></div>
+    <!--scripts-->
+    <script src="js/jquery-2.2.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.1.3.min.js"></script>
+    <script>
+        $(function () {
+            $('body').on('click', '.page-scroll a', function (event) {
+                var $anchor = $(this);
+                $('html, body').stop().animate({
+                    scrollTop: $($anchor.attr('href')).offset().top
+                }, 1500, 'easeInOutExpo');
+                event.preventDefault();
+            });
+        });
+        $('body').scrollspy({
+            target: '.navbar-fixed-top'
+        })
+    </script>
+</body>
 </html>
