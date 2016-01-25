@@ -6,7 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>H. Daniel Zhu</title>
     <link rel="stylesheet" href="css/darkly.css" />
+    <link rel="stylesheet" href="css/animate.min.css" />
     <style>
+        body {
+            overflow-x: hidden;
+        }
+
         header {
             padding-top: 30px;
         }
@@ -27,6 +32,24 @@
             background-size: cover;
             background-position: center center;
             background-attachment: fixed;
+        }
+
+        div[data-animation] {
+            visibility: hidden;
+        }
+
+        .delay-short {
+            -moz-animation-delay: 1s;
+            -o-animation-delay: 1s;
+            -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+        }
+
+        .delay-long {
+            -moz-animation-delay: 2s;
+            -o-animation-delay: 2s;
+            -webkit-animation-delay: 2s;
+            animation-delay: 2s;
         }
 
         .command {
@@ -89,21 +112,21 @@
     <header id="home">
         <div class="jumbotron">
             <div class="container">
-                <h1 class="text-center">Hongjian Daniel Zhu</h1>
-                <h2 class="text-center">Software Developer / Architect. <small>Since the age of 11.</small></h2>
+                <h1 id="name" class="text-center animated zoomIn">Hongjian Daniel Zhu</h1>
+                <h2 id="profession" class="text-center animated fadeInDown delay-short">Software Developer / Architect. <small>Since the age of 11.</small></h2>
             </div>
         </div>
     </header>
     <section id="about">
         <div class="container">
             <div class="row">
-                <div class="col-md-8">
+                <div class="col-md-8 animated fadeInLeft delay-long">
                     <h2>About</h2>
                     <p class="lead">
                         Pursuing my studies for Bachelor of Computer Science in University of Waterloo, I love challenges and am always eager to learn and expand my skills. Being a hardcore software developer / architect, one of the greatest pleasures in my life is designing, implementing, and testing software, as well as discovering and mastering new languages, frameworks, and other fascinating and powerful tools.
                     </p>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 animated fadeInRight delay-long">
                     <h3>Information</h3>
                     <table class="table">
                         <tr>
@@ -135,13 +158,13 @@
     <section id="skills">
         <div class="container">
             <div class="row">
-                <div class="col-md-7 col-md-push-5">
+                <div class="col-md-7 col-md-push-5" data-animation="fadeInRight">
                     <h2>Skills</h2>
                     <p>
                         As a .NET / Graphics / Web Developer, I am proficient in developing both desktop and web applications, as well as front-end and back-end software. With expertise in <strong>C#</strong>, <strong>C++</strong> and <strong>JavaScript</strong>, proficiency in <strong>C</strong>, <strong>Java</strong>, <strong>Python</strong>, <strong>HTML</strong>, <strong>CSS</strong>, <strong>XML</strong> and <strong>JSON</strong>, and knowledge in 10+ other languages and frameworks, it is fast and easy for me to pick up any new programming languages and frameworks when needed.
                     </p>
                 </div>
-                <div class="col-md-5 col-md-pull-7">
+                <div class="col-md-5 col-md-pull-7" data-animation="fadeInLeft">
                     <pre class="code-wrap"><span class="command">#ifndef</span> <span class="macro">MYSELF</span>
 <span class="keyword">public class</span> <span class="class">Me</span> <span class="keyword">implements</span> <span class="class">Designer</span>, <span class="class">Developer</span> {
     <span class="keyword">int</span> main(<span class="keyword">int</span> <span class="arg">argc</span>, <span class="keyword">const char</span> *<span class="arg">argv</span>[]) {
@@ -157,19 +180,19 @@
             </div>
             <hr />
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-4" data-animation="fadeInDown">
                     <h3>C#</h3>
                     <p>
                         As a high-level language that comes with a huge standard library and one of the best IDEs, this language led me into the wonderful world of software development. Being my first programming language, I have <strong>7 years</strong> of experience in C# and wrote numerous projects. I have developed applications using <strong>WinForms</strong> and <strong>WPF</strong>, made web applications in <strong>ASP.NET</strong>, and have extensively used various tools in the <strong>.NET Library</strong>. Recently I also embedded <strong>IronPython</strong> into a lot of my projects for extensibility and plug-in support.
                     </p>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4" data-animation="fadeInDown">
                     <h3>C++</h3>
                     <p>
                         A software developer will surely have heard about C / C++, if not learned or mastered the language. I have used C++ for <strong>4 years</strong>, learned a lot about the compiling process, and developed quite a few projects in C++. Since I am always passionate about the ways programs work fundamentally, I have been working on a language interpreter in C++, and have decent knowledge in <strong>Standard Template Library</strong> and <strong>WinAPI</strong>.
                     </p>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4" data-animation="fadeInDown">
                     <h3>JavaScript</h3>
                     <p>
                         The internet is growing faster and faster, and now web technologies are becoming a huge part of application development. I started to explore the code behind the web <strong>4 years</strong> ago, loved the flexibility and portability ever since, and wrote a wide range of utilities and frameworks. I worked with both the back-end, with frameworks such as <strong>Express</strong> on <strong>node.js</strong>, and the front-end with <strong>jQuery</strong> and <strong>Bootstrap</strong>.
@@ -178,7 +201,7 @@
             </div>
             <hr />
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-sm-6 col-md-6" data-animation="fadeInUp">
                     <h3>Development Environments</h3>
                     <p>
                         A good developer needs a good blaster... no I mean development environment at his / her side. Even though good old notepad and cat can be useful at times, it is often more efficient to use and IDE / text editor. I have experience and am comfortable with:
@@ -189,14 +212,11 @@
                         <li>Eclipse</li>
                         <li>Sublime Text</li>
                     </ul>
-                    <p>
-                        ... and definitely willing to learn more!
-                    </p>
                 </div>
-                <div class="col-md-6">
+                <div class="col-sm-6 col-md-6" data-animation="fadeInUp">
                     <h3>Tools</h3>
                     <p>
-                        Aside from IDEs, other tools can be quite useful as well. I have used these tools extensively, and know their roles and capability as well:
+                        Aside from IDEs, other tools can be quite useful as well. I have used these tools extensively, and know their roles and capabilities as well:
                     </p>
                     <ul>
                         <li>Unix Shell</li>
@@ -213,10 +233,10 @@
     <section id="projects">
         <div class="container">
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-4" data-animation="fadeInLeft">
                     <h2>Projects</h2>
                 </div>
-                <div class="col-md-8">
+                <div class="col-md-8" data-animation="fadeInRight">
                     <p>
                         Designing and implementing various kinds of programs is definitely one of my passions of life. Whenever I feel the need for a piece of software or just want to test my skills and try it out, I start planning the project, looking through the tools and techniques I have, and finally start writing code for it. Here are just a fraction of my projects, but I will be moving many of the rest to GitHub soon.
                     </p>
@@ -232,36 +252,68 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.smooth-scroll.js"></script>
     <script>
-        $('a').smoothScroll();
-        $('body').scrollspy({
-            target: '.navbar-fixed-top'
-        })
-        $.ajax('https://api.github.com/users/danzhu/repos')
-        .then(function (data) {
-            $('#projectLoading').hide();
-            $('#projectMenu').append(
-                $('<li/>', { 'role': 'separator', 'class': 'divider'})
-            );
-            for (var item in data) {
-                $('#projectList').append(
-                    $('<div/>', { 'class': 'col-sm-6 col-md-4' }).append(
-                        $('<h3/>').append(
-                            $('<a/>', { 'href': data[item].html_url }).text(data[item].name),
-                            $('<br/>'),
-                            $('<small/>').text(data[item].language)
-                        ),
-                        $('<p/>').text(data[item].description)
-                    )
-                );
+        $(document).ready(function () {
+            // Animation based on scrolling position
+            $(window).scroll(function () {
+                var windowPos = $(window).scrollTop() + $(window).height();
+                $('div[data-animation]').each(function () {
+                    var itemPos = $(this).offset().top + $(this).outerHeight();
+                    if (windowPos < itemPos)
+                        return;
+                    $(this).addClass('animated ' + $(this).data('animation')).removeAttr('data-animation');
+                });
+            });
+
+            // Smooth link scrolling
+            $('a').smoothScroll();
+
+            // Update navbar on scrolling
+            $('body').scrollspy({
+                target: '.navbar-fixed-top'
+            })
+
+            // Load projects using GitHub API
+            // (so I don't have to update this page THAT often)
+            $.ajax('https://api.github.com/users/danzhu/repos')
+            .then(function (data) {
+                $('#projectLoading').hide();
                 $('#projectMenu').append(
-                    $('<li/>').append(
-                        $('<a/>', { 'href': data[item].html_url }).text(data[item].name)
-                    )
+                    $('<li/>', { 'role': 'separator', 'class': 'divider' })
                 );
-            }
-        }, function () {
-            $('#projectLoading').hide();
-            $('#projectFailed').show();
+                for (var i = 0; i < data.length; i++) {
+                    var item = data[i];
+
+                    // Add project to menu
+                    $('#projectMenu').append(
+                        $('<li/>').append(
+                            $('<a/>', { 'href': item.html_url }).text(item.name)
+                        )
+                    );
+
+                    // If even, use clearfix to clear project list
+                    // so different heights won't be a problem
+                    if (i % 2 == 0) {
+                        $('#projectList').append(
+                            $('<div/>', { 'class': 'clearfix visible-sm-block' })
+                        );
+                    }
+
+                    // Add project to project list
+                    $('#projectList').append(
+                        $('<div/>', { 'class': 'col-sm-6 col-md-4', 'data-animation': 'fadeInDown' }).append(
+                            $('<h3/>').append(
+                                $('<a/>', { 'href': item.html_url }).text(item.name),
+                                $('<br/>'),
+                                $('<small/>').text(item.language)
+                            ),
+                            $('<p/>').text(item.description)
+                        )
+                    );
+                }
+            }, function () {
+                $('#projectLoading').hide();
+                $('#projectFailed').show();
+            });
         });
     </script>
 </body>
