@@ -72,20 +72,14 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#about">About</a></li>
                     <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                            Projects
+                            GitHub
                             <span class="caret"></span>
                         </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="https://github.com/danzhu">GitHub</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="https://github.com/danzhu/launcher">launcher</a></li>
-                            <li><a href="https://github.com/danzhu/JoyfulColours">JoyfulColours</a></li>
-                            <li><a href="https://github.com/danzhu/birthland">birthland</a></li>
-                            <li><a href="https://github.com/danzhu/RawScript">RawScript</a></li>
-                            <li><a href="https://github.com/danzhu/RPG">RPG</a></li>
-                            <li><a href="https://github.com/danzhu/square.js">square.js</a></li>
+                        <ul id="projectMenu" class="dropdown-menu">
+                            <li><a href="https://github.com/danzhu">Profile</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -216,6 +210,27 @@
         </div>
     </section>
     <div class="picture" style="background-image: url(images/2.jpg);"></div>
+    <section id="projects">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7">
+                    <h2>Projects</h2>
+                    <p>
+                        Designing and implementing various kinds of programs is definitely one of my passions of life. Whenever I feel the need for a piece of software or just want to test my skills and try it out, I start planning the project, looking through the tools and techniques I have, and finally start writing code for it. Here are just a fraction of my projects, but I will be moving many of the rest to GitHub soon.
+                    </p>
+                </div>
+                <div class="col-md-5">
+                    <blockquote>
+                        The best thing about a boolean is even if you are wrong, you are only off by a bit.
+                        <footer>Anonymous</footer>
+                    </blockquote>
+                </div>
+            </div>
+            <p id="projectLoading" class="text-info">Loading...</p>
+            <p id="projectFailed" class="text-danger" hidden>Project list failed to load from GitHub API. Please use the GitHub link to check out my projects</p>
+            <div id="projectList" class="row"></div>
+        </div>
+    </section>
     <!--scripts-->
     <script src="js/jquery-2.2.0.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
@@ -225,6 +240,33 @@
         $('body').scrollspy({
             target: '.navbar-fixed-top'
         })
+        $.ajax('https://api.github.com/users/danzhu/repos')
+        .then(function (data) {
+            $('#projectLoading').hide();
+            $('#projectMenu').append(
+                $('<li/>', { 'role': 'separator', 'class': 'divider'})
+            );
+            for (var item in data) {
+                $('#projectList').append(
+                    $('<div/>', { 'class': 'col-sm-6 col-md-4' }).append(
+                        $('<h3/>').append(
+                            $('<a/>', { 'href': data[item].homepage }).text(data[item].name),
+                            $('<br/>'),
+                            $('<small/>').text(data[item].language)
+                        ),
+                        $('<p/>').text(data[item].description)
+                    )
+                );
+                $('#projectMenu').append(
+                    $('<li/>').append(
+                        $('<a/>', { 'href': data[item].html_url }).text(data[item].name)
+                    )
+                );
+            }
+        }, function () {
+            $('#projectLoading').hide();
+            $('#projectFailed').show();
+        });
     </script>
 </body>
 </html>
