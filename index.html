@@ -12,14 +12,6 @@
             overflow-x: hidden;
         }
 
-        header {
-            padding-top: 30px;
-        }
-
-        section {
-            padding: 50px 0;
-        }
-
         .code-wrap {
             overflow: auto;
             -ms-word-wrap: normal;
@@ -32,10 +24,6 @@
             background-size: cover;
             background-position: center center;
             background-attachment: fixed;
-        }
-
-        div[data-animation] {
-            visibility: hidden;
         }
 
         .delay-short {
@@ -72,12 +60,22 @@
             .picture {
                 display: none;
             }
+        }
+    
+        @media not print {
+            header {
+                padding-top: 30px;
+            }
 
             section {
-                padding: 0;
+                padding: 50px 0;
+            }
+
+            div[data-animation] {
+                visibility: hidden;
             }
         }
-    </style>
+</style>
 </head>
 <body>
     <nav class="navbar navbar-default navbar-fixed-top">
@@ -112,8 +110,8 @@
     <header id="home">
         <div class="jumbotron">
             <div class="container">
-                <h1 id="name" class="text-center animated zoomIn">Hongjian Daniel Zhu</h1>
-                <h2 id="profession" class="text-center animated fadeInDown delay-short">Software Developer / Architect. <small>Since the age of 11.</small></h2>
+                <h1 class="text-center animated zoomIn">Hongjian Daniel Zhu</h1>
+                <h2 class="text-center animated fadeInDown delay-short">Software Developer / Architect. <small>Since the age of 11.</small></h2>
             </div>
         </div>
     </header>
