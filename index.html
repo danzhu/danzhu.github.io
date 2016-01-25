@@ -213,17 +213,13 @@
     <section id="projects">
         <div class="container">
             <div class="row">
-                <div class="col-md-7">
+                <div class="col-md-4">
                     <h2>Projects</h2>
+                </div>
+                <div class="col-md-8">
                     <p>
                         Designing and implementing various kinds of programs is definitely one of my passions of life. Whenever I feel the need for a piece of software or just want to test my skills and try it out, I start planning the project, looking through the tools and techniques I have, and finally start writing code for it. Here are just a fraction of my projects, but I will be moving many of the rest to GitHub soon.
                     </p>
-                </div>
-                <div class="col-md-5">
-                    <blockquote>
-                        The best thing about a boolean is even if you are wrong, you are only off by a bit.
-                        <footer>Anonymous</footer>
-                    </blockquote>
                 </div>
             </div>
             <p id="projectLoading" class="text-info">Loading...</p>
@@ -250,7 +246,7 @@
                 $('#projectList').append(
                     $('<div/>', { 'class': 'col-sm-6 col-md-4' }).append(
                         $('<h3/>').append(
-                            $('<a/>', { 'href': data[item].homepage }).text(data[item].name),
+                            $('<a/>', { 'href': data[item].html_url }).text(data[item].name),
                             $('<br/>'),
                             $('<small/>').text(data[item].language)
                         ),
