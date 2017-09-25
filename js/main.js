@@ -16,7 +16,7 @@ $(document).ready(function () {
     // Animation based on scrolling position
     $(window).scroll(function () {
         var windowPos = $(window).scrollTop() + $(window).height();
-        $('div[data-animation]').each(function () {
+        $('[data-animation]').each(function () {
             var itemPos = $(this).offset().top;
             if (windowPos < itemPos + 50)
                 return;
@@ -62,7 +62,7 @@ $(document).ready(function () {
 
             // Add project to project list
             list.append(
-                $('<div/>', { 'class': 'col-sm-6 col-md-4', 'data-animation': 'fadeInDown' }).append(
+                $('<div/>', { 'class': 'col-sm-6 col-md-4', 'data-animation': 'fadeInUp' }).append(
                     $('<h3/>').append(
                         $('<a/>', { 'href': item.html_url }).text(item.name),
                         $('<br/>'),

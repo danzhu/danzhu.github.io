@@ -33,7 +33,7 @@
 .demo {
     width: 100%;
     height: 600px;
-    border: 1px solid white;
+    border: 1px solid gray;
 }
 
 .fin-code {
@@ -59,7 +59,7 @@
         padding: 50px 0;
     }
 
-    div[data-animation] {
-        visibility: hidden;
+    [data-animation] {
+        opacity: 0;
     }
 }

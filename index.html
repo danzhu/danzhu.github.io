@@ -59,7 +59,7 @@
     <div class="static-picture" style="background-image: url(images/1.jpg);"></div>
     <section id="fin">
       <div class="container">
-        <h2 class="text-center"><a href="https://github.com/danzhu/fin">The Fin Project</a></h2>
+        <h2 class="text-center" data-animation="fadeInDown"><a href="https://github.com/danzhu/fin">The Fin Project</a></h2>
         <hr />
         <div class="row">
           <div class="col-md-6" data-animation="fadeInLeft">
@@ -118,7 +118,7 @@ EOF</pre>
           </div>
         </div>
         <div class="row">
-          <div class="col-md-6" data-animation="fadeInUp">
+          <div class="col-md-6" data-animation="fadeInLeft">
             <h3 class="text-center">AST</h3>
             <pre class="fin-code">File
   Def fib(n Int) Int
@@ -163,7 +163,7 @@ EOF</pre>
                             Path n
                         Const &lt;Int&gt; 1</pre>
           </div>
-          <div class="col-md-6" data-animation="fadeInUp">
+          <div class="col-md-6" data-animation="fadeInRight">
             <h3 class="text-center">Assembly</h3>
             <pre class="fin-code">lib 'main'
 
@@ -250,13 +250,18 @@ END_FN_0:</pre>
           </div>
         </div>
         <hr />
-        <iframe class="demo" src="http://138.197.144.152/"></iframe>
+        <iframe class="demo"
+                src="http://138.197.144.152/"
+                data-animation="fadeInUp">
+        </iframe>
       </div>
     </section>
     <div class="static-picture" style="background-image: url(images/2.jpg);"></div>
     <section id="projects">
       <div class="container">
-        <h2 class="text-center">Projects on <a href="https://github.com/danzhu">GitHub</a></h2>
+        <h2 class="text-center" data-animation="fadeInDown">
+          Projects on <a href="https://github.com/danzhu">GitHub</a>
+        </h2>
         <hr/>
         <div id="projectList" class="row"></div>
         <p id="projectLoading" class="text-info">
