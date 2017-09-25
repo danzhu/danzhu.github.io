@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
@@ -7,333 +7,281 @@
     <title>H. Daniel Zhu</title>
     <link rel="stylesheet" href="css/darkly.css" />
     <link rel="stylesheet" href="css/animate.min.css" />
-    <style>
-        #wrapper {
-            overflow-x: hidden;
-        }
-
-        .code-wrap {
-            overflow: auto;
-            -ms-word-wrap: normal;
-            word-wrap: normal;
-            white-space: pre;
-        }
-
-        .static-picture {
-            height: 300px;
-            background-size: cover;
-            background-position: center center;
-            background-attachment: fixed;
-        }
-
-        .delay-short {
-            -moz-animation-delay: 1s;
-            -o-animation-delay: 1s;
-            -webkit-animation-delay: 1s;
-            animation-delay: 1s;
-        }
-
-        .delay-long {
-            -moz-animation-delay: 2s;
-            -o-animation-delay: 2s;
-            -webkit-animation-delay: 2s;
-            animation-delay: 2s;
-        }
-
-        .command {
-            color: gray;
-        }
-        .macro {
-            color: purple;
-        }
-        .keyword {
-            color: blue;
-        }
-        .class {
-            color: steelblue;
-        }
-        .arg {
-            color: gray;
-        }
-        
-        @media print {
-            .picture {
-                display: none;
-            }
-        }
-    
-        @media not print {
-            #home {
-                padding-top: 30px;
-            }
-
-            section {
-                padding: 50px 0;
-            }
-
-            div[data-animation] {
-                visibility: hidden;
-            }
-        }
-</style>
+    <link rel="stylesheet" href="css/main.css" />
 </head>
 <body>
-    <div id="wrapper">
-        <nav class="navbar navbar-default navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#home">H. Daniel Zhu</a>
-                </div>
-                <div id="navbar" class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#skills">Skills</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                GitHub
-                                <span class="caret"></span>
-                            </a>
-                            <ul id="projectMenu" class="dropdown-menu">
-                                <li><a href="https://github.com/danzhu">Profile</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <header id="home">
-            <div class="jumbotron">
-                <div class="container">
-                    <h1 class="text-center animated zoomIn">Hongjian Daniel Zhu</h1>
-                    <h2 class="text-center animated fadeInDown delay-short">Software Developer / Designer. <small>Since the age of 11.</small></h2>
-                </div>
-            </div>
-        </header>
-        <section id="about">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 animated fadeInLeft delay-long">
-                        <h2>About</h2>
-                        <p class="lead">
-                        Pursuing my studies for Bachelor of Computer Science in University of Waterloo, I love challenges and am always eager to learn and expand my skills. Being a hardcore software developer / designer, one of the greatest pleasures in my life is designing, implementing, and testing software, as well as discovering and mastering new languages, frameworks, and other fascinating and powerful tools.
-                        </p>
-                    </div>
-                    <div class="col-md-4 animated fadeInRight delay-long">
-                        <h3>Information</h3>
-                        <table class="table">
-                            <tr>
-                                <td>Education</td>
-                                <td>Student at University of Waterloo</td>
-                            </tr>
-                            <tr>
-                                <td>Major</td>
-                                <td>Computer Science</td>
-                            </tr>
-                            <tr>
-                                <td>Expertise</td>
-                                <td>C#, C++, Python, JavaScript</td>
-                            </tr>
-                            <tr>
-                                <td>Languages</td>
-                                <td>English, Mandarin</td>
-                            </tr>
-                            <tr>
-                                <td>Interests</td>
-                                <td>Programming, Piano, and Games!</td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <div class="static-picture" style="background-image: url(images/1.jpg);"></div>
-        <section id="skills">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-7 col-md-push-5" data-animation="fadeInRight">
-                        <h2>Skills</h2>
-                        <p>
-                        As a .NET / Graphics / Web Developer, I am proficient in developing both desktop and web applications, as well as front-end and back-end software. With expertise in <strong>C#</strong>, <strong>C++</strong>, <strong>Python</strong>, and <strong>JavaScript</strong>, proficiency in <strong>C</strong>, <strong>Java</strong>, <strong>HTML</strong>, <strong>CSS</strong>, <strong>XML</strong> and <strong>JSON</strong>, and knowledge in 10+ other languages and frameworks, it is fast and easy for me to pick up any new programming languages and frameworks when needed.
-                        </p>
-                    </div>
-                    <div class="col-md-5 col-md-pull-7" data-animation="fadeInLeft">
-                        <pre class="code-wrap"><span class="command">#ifndef</span> <span class="macro">MYSELF</span>
-<span class="keyword">public class</span> <span class="class">Me</span> <span class="keyword">implements</span> <span class="class">Designer</span>, <span class="class">Developer</span> {
-    <span class="keyword">int</span> main(<span class="keyword">int</span> <span class="arg">argc</span>, <span class="keyword">const char</span> *<span class="arg">argv</span>[]) {
-        <span class="keyword">while</span> self.Capable:
-            requestTask(<span class="keyword">function</span> (<span class="arg">task</span>) {
-                <span class="class">nonstd</span>::complete(<span class="arg">task</span>);
-            });
-    }
-    <span class="keyword">bool</span> Capable =&gt; <span class="keyword">true</span>;
-}
-<span class="command">#endif</span></pre>
-                    </div>
-                </div>
-                <hr />
-                <div class="row">
-                    <div class="col-md-4" data-animation="fadeInDown">
-                        <h3>C#</h3>
-                        <p>
-                        As a high-level language that comes with a huge standard library and one of the best IDEs, this language led me into the wonderful world of software development. Being my first programming language, I have <strong>8 years</strong> of experience in C# and wrote numerous projects. I have developed applications using <strong>WPF</strong>, made web applications in <strong>ASP.NET</strong>, and have extensively used various tools in the <strong>.NET Library</strong>. I also embedded <strong>IronPython</strong> into some of my projects for extensibility and plug-in support, as well as utilizing <strong>MonoGame</strong> for my game projects.
-                        </p>
-                    </div>
-                    <div class="col-md-4" data-animation="fadeInDown">
-                        <h3>C++</h3>
-                        <p>
-                        A software developer will surely have heard about C / C++, if not learned or mastered the language. I have used C++ for <strong>5 years</strong>, learned a lot about the compiling process, and developed quite a few projects in C++. Since I am always passionate about the ways programs work fundamentally, I tried creating a language interpreter in C++, and have decent knowledge in <strong>C++ 14</strong> and its <strong>Standard Library</strong>.
-                        </p>
-                    </div>
-                    <div class="col-md-4" data-animation="fadeInDown">
-                        <h3>JavaScript</h3>
-                        <p>
-                        The internet is growing faster and faster, and now web technologies are becoming a huge part of application development. I started to explore the code behind the web also <strong>5 years</strong> ago, loved the flexibility and portability ever since, and wrote a wide range of utilities and frameworks. I worked with both the back-end, with frameworks such as <strong>Express</strong> on <strong>Node.js</strong>, and the front-end with <strong>jQuery</strong> and <strong>Bootstrap</strong>, and possibly building desktop apps with <strong>Electron</strong>. I'm also diving into <strong>AngularJS</strong>, and will be learning more awesome frameworks going forward.
-                        </p>
-                    </div>
-                </div>
-                <hr />
-                <div class="row">
-                    <div class="col-sm-6 col-md-6" data-animation="fadeInUp">
-                        <h3>Development Environments</h3>
-                        <p>
-                        Windows was my favourite... until I discovered Linux. I'm now using my own <strong>Arch Linux</strong> installation for pretty much all daily tasks, including working on school assignments, development for my next project, and more. It not only is comfortable and easy to tweak, it also teaches me the basics of a Linux installation &mdash; from hostname configuration to XServer installation. Nevertheless, Windows is still great, and I'm no less efficient with the right tools installed.
-                        </p>
-                        <p>
-                        After years of coding in Visual Studio, I finally switched to <strong>Vim</strong> as my full-time editor of choice. With my accumulated configuration, dozens of plugins, and even one plugin I wrote myself, it's as efficient as I can possibly get. Still, my previous skills were not lost &mdash; I'm still proficient with coding and debugging in <strong>Visual Studio</strong>, and am also familiar with <strong>Eclipse</strong> for some Java.
-                        </p>
-                    </div>
-                    <div class="col-sm-6 col-md-6" data-animation="fadeInUp">
-                        <h3>Tools</h3>
-                        <p>
-                        Aside from OSs and IDEs, other tools can be quite useful as well. I have been using these tools almost daily, and know their roles and capabilities as well:
-                        </p>
-                        <ul>
-                            <li>Bash</li>
-                            <li>Git</li>
-                            <li>GDB</li>
-                            <li>Valgirnd</li>
-                            <li>GNU Make</li>
-                            <li>GNU Utils</li>
-                            <li>Microsoft Office</li>
-                            <li>... and more</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <div class="static-picture" style="background-image: url(images/2.jpg);"></div>
-        <section id="projects">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4" data-animation="fadeInLeft">
-                        <h2>Projects</h2>
-                    </div>
-                    <div class="col-md-8" data-animation="fadeInRight">
-                        <p>
-                        Designing and implementing various kinds of programs is definitely one of my passions of life. Whenever I feel the need for a piece of software or just want to test my skills and try it out, I start planning the project, looking through the tools and techniques I have, and finally start writing code for it. Here are just a fraction of my projects, but I will soon be moving many of the rest to <a href="https://github.com/danzhu">my GitHub</a>.
-                        </p>
-                    </div>
-                </div>
-                <hr/>
-                <div id="projectList" class="row"></div>
-                <p id="projectLoading" class="text-info">
-                <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
-                <span class="sr-only">Info:</span>
-                Loading...
-                </p>
-                <div id="projectLoaded" style="display: none;">
-                    <hr/>
-                    <p>
-                    By the way if you didn't notice &mdash; this list of projects is dynamically generated from my GitHub profile when the page is loaded :)
-                    </p>
-                </div>
-                <p id="projectFailed" class="text-danger" style="display: none;">
-                <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-                <span class="sr-only">Error:</span>
-                Project list failed to load from GitHub API :( Please use the GitHub link above to check out my projects.
-                </p>
-            </div>
-        </section>
-        <!--scripts-->
-        <script src="js/jquery-2.2.0.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/jquery.smooth-scroll.js"></script>
-        <script>
-            $(document).ready(function () {
-                // Animation based on scrolling position
-                $(window).scroll(function () {
-                    var windowPos = $(window).scrollTop() + $(window).height();
-                    $('div[data-animation]').each(function () {
-                        var itemPos = $(this).offset().top;
-                        if (windowPos < itemPos + 50)
-                            return;
-                        $(this).addClass('animated ' + $(this).data('animation')).removeAttr('data-animation');
-                    });
-                });
+  <div id="wrapper">
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#home">H. Daniel Zhu</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#fin">Fin</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                GitHub
+                <span class="caret"></span>
+              </a>
+              <ul id="projectMenu" class="dropdown-menu">
+                <li><a href="https://github.com/danzhu">Profile</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <header id="home">
+      <div class="jumbotron">
+        <div class="container">
+          <h1 class="text-center animated zoomIn">Hongjian Daniel Zhu</h1>
+          <h2 class="text-center animated fadeInDown delay-short">Software Developer / Designer. <small>Since the age of 11.</small></h2>
+        </div>
+      </div>
+    </header>
+    <section>
+      <div class="container">
+        <div class="lead animated fadeInLeft delay-long">
+          <p id="greetings">Hi.</p>
+          <p>I love to learn, and I love to create. I love to give, and I love to teach.</p>
+          <p>People dreamt about what they could achieve. By the time they wake up, these are already my achievements.</p>
+        </div>
+      </div>
+    </section>
+    <div class="static-picture" style="background-image: url(images/1.jpg);"></div>
+    <section id="fin">
+      <div class="container">
+        <h2 class="text-center"><a href="https://github.com/danzhu/fin">The Fin Project</a></h2>
+        <hr />
+        <div class="row">
+          <div class="col-md-6" data-animation="fadeInLeft">
+            <h3 class="text-center">Source</h3>
+            <pre class="fin-code">def fib(n Int) Int
+    match n
+        0 =&gt; 0
+        1 =&gt; 1
+        _ =&gt; fib(n - 2) + fib(n - 1)</pre>
+          </div>
+          <div class="col-md-6" data-animation="fadeInRight">
+            <h3 class="text-center">Lex</h3>
+            <pre class="fin-code">DEF def
+ID [ID] fib
+LPAREN [LPAREN] (
+ID [ID] n
+ID [ID] Int
+RPAREN [RPAREN] )
+ID [ID] Int
+INDENT
+MATCH match
+ID [ID] n
+INDENT
+NUM [ZERO] 0
+ARM [ARM] =&gt;
+NUM [ZERO] 0
+EOL 
 
-                // Smooth link scrolling
-                $('a').smoothScroll();
+NUM [NUM] 1
+ARM [ARM] =&gt;
+NUM [NUM] 1
+EOL 
 
-                // Update navbar on scrolling
-                $('body').scrollspy({
-                    target: '.navbar-fixed-top'
-                });
+UNDERSCORE [UNDERSCORE] _
+ARM [ARM] =&gt;
+ID [ID] fib
+LPAREN [LPAREN] (
+ID [ID] n
+MINUS [MINUS] -
+NUM [NUM] 2
+RPAREN [RPAREN] )
+PLUS [PLUS] +
+ID [ID] fib
+LPAREN [LPAREN] (
+ID [ID] n
+MINUS [MINUS] -
+NUM [NUM] 1
+RPAREN [RPAREN] )
+EOL 
 
-                // Load projects using GitHub API
-                $.ajax('https://api.github.com/users/danzhu/repos')
-                .then(function (data) {
-                    $('#projectLoading').hide();
+DEDENT
+EOL
+DEDENT
+EOL
+EOF</pre>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6" data-animation="fadeInUp">
+            <h3 class="text-center">AST</h3>
+            <pre class="fin-code">File
+  Def fib(n Int) Int
+    List
+    List
+      Param n
+        TypeNamed
+          Path Int
+    TypeNamed
+      Path Int
+    Block &lt;Int&gt;
+      Match &lt;Int&gt;
+        Var &lt;&amp;Int&gt; n Int
+          Path n
+        List
+          Arm Match 0
+            PatternConst 0
+            Const &lt;Int&gt; 0
+          Arm Match 1
+            PatternConst 1
+            Const &lt;Int&gt; 1
+          Arm Match _
+            PatternAny
+            Op &lt;Int&gt; plus(left Int, right Int) Int
+              List
+                Call &lt;Int&gt; fib(n Int) Int
+                  Path fib
+                  List
+                    Op &lt;Int&gt; minus(left Int, right Int) Int
+                      List
+                        Deref &lt;Int&gt;
+                          Var &lt;&amp;Int&gt; n Int
+                            Path n
+                        Const &lt;Int&gt; 2
+                Call &lt;Int&gt; fib(n Int) Int
+                  Path fib
+                  List
+                    Op &lt;Int&gt; minus(left Int, right Int) Int
+                      List
+                        Deref &lt;Int&gt;
+                          Var &lt;&amp;Int&gt; n Int
+                            Path n
+                        Const &lt;Int&gt; 1</pre>
+          </div>
+          <div class="col-md-6" data-animation="fadeInUp">
+            <h3 class="text-center">Assembly</h3>
+            <pre class="fin-code">lib 'main'
 
-                    var menu = $('#projectMenu');
-                    var list = $('#projectList');
-                    menu.append(
-                        $('<li/>', { 'role': 'separator', 'class': 'divider' })
-                    );
-                    for (var i = 0; i < data.length; i++) {
-                        var item = data[i];
 
-                        // Add project to menu
-                        menu.append(
-                            $('<li/>').append(
-                                $('<a/>', { 'href': item.html_url }).text(item.name)
-                            )
-                        );
-
-                        // Use clearfix to clear project list
-                        // so different heights won't be a problem
-                        if (i % 2 == 0 && i != 0) {
-                            list.append($('<div/>', { 'class': 'clearfix visible-sm-block' }));
-                        }
-                        if (i % 3 == 0 && i != 0) {
-                            list.append($('<div/>', { 'class': 'clearfix visible-md-block visible-lg-block' }));
-                        }
-
-                        // Add project to project list
-                        list.append(
-                            $('<div/>', { 'class': 'col-sm-6 col-md-4', 'data-animation': 'fadeInDown' }).append(
-                                $('<h3/>').append(
-                                    $('<a/>', { 'href': item.html_url }).text(item.name),
-                                    $('<br/>'),
-                                    $('<small/>').text(item.language)
-                                ),
-                                $('<p/>').text(item.description)
-                            )
-                        );
-                        $('#projectLoaded').show();
-                    }
-                }, function () {
-                    $('#projectLoading').hide();
-                    $('#projectFailed').show();
-                });
-            });
-        </script>
-    </div>
+# Def
+fn 'fib(Int)Int' 0 0 BEGIN_FN_0 END_FN_0
+  # types
+  !sz &amp;
+  size_p
+  
+  !sz Int
+  size_i
+  
+  
+  # contracts
+  !ctr main:fib(Int)Int
+  contract main:fib(Int)Int
+  
+  
+  # params
+  !off n_p0
+  param Int
+  
+  
+  # locals
+sign
+BEGIN_FN_0:
+# Block &lt;Int&gt;
+  # Match &lt;Int&gt;
+    # Var &lt;&amp;Int&gt; n Int
+      addr_arg n_p0
+    dup &amp;
+    # match 0
+      load Int
+      const_i 0
+      eq_i
+      br_false ARM_0
+    pop &amp;
+    # Const &lt;Int&gt; 0
+      const_i 0
+    br END_MATCH_0
+    ARM_0:
+    dup &amp;
+    # match 1
+      load Int
+      const_i 1
+      eq_i
+      br_false ARM_1
+    pop &amp;
+    # Const &lt;Int&gt; 1
+      const_i 1
+    br END_MATCH_0
+    ARM_1:
+    pop &amp;
+    # Op &lt;Int&gt; plus(left Int, right Int) Int
+      # Call &lt;Int&gt; fib(n Int) Int
+        # Op &lt;Int&gt; minus(left Int, right Int) Int
+          # Deref &lt;Int&gt;
+            # Var &lt;&amp;Int&gt; n Int
+              addr_arg n_p0
+            load Int
+          # Const &lt;Int&gt; 2
+            const_i 2
+          sub_i
+        call main:fib(Int)Int
+      # Call &lt;Int&gt; fib(n Int) Int
+        # Op &lt;Int&gt; minus(left Int, right Int) Int
+          # Deref &lt;Int&gt;
+            # Var &lt;&amp;Int&gt; n Int
+              addr_arg n_p0
+            load Int
+          # Const &lt;Int&gt; 1
+            const_i 1
+          sub_i
+        call main:fib(Int)Int
+      add_i
+    br END_MATCH_0
+    ARM_2:
+    error
+    END_MATCH_0:
+  
+ret Int
+END_FN_0:</pre>
+          </div>
+        </div>
+        <hr />
+        <iframe class="demo" src="http://138.197.144.152/"></iframe>
+      </div>
+    </section>
+    <div class="static-picture" style="background-image: url(images/2.jpg);"></div>
+    <section id="projects">
+      <div class="container">
+        <h2 class="text-center">Projects on <a href="https://github.com/danzhu">GitHub</a></h2>
+        <hr/>
+        <div id="projectList" class="row"></div>
+        <p id="projectLoading" class="text-info">
+        <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+        <span class="sr-only">Info:</span>
+        Loading...
+        </p>
+        <div id="projectLoaded" style="display: none;">
+          <hr/>
+          <p>
+          List of projects dynamically generated from my GitHub profile :)
+          </p>
+        </div>
+        <p id="projectFailed" class="text-danger" style="display: none;">
+        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+        <span class="sr-only">Error:</span>
+        Project list failed to load from GitHub API :( Please use the GitHub link above to check out my projects.
+        </p>
+      </div>
+    </section>
+    <!--scripts-->
+    <script src="js/jquery-2.2.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.smooth-scroll.js"></script>
+    <script src="js/main.js"></script>
+  </div>
 </body>
 </html>

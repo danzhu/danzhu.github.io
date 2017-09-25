@@ -1,0 +1,65 @@
+#wrapper {
+    overflow-x: hidden;
+}
+
+.code-wrap {
+    overflow: auto;
+    -ms-word-wrap: normal;
+    word-wrap: normal;
+    white-space: pre;
+}
+
+.static-picture {
+    height: 300px;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+.delay-short {
+    -moz-animation-delay: 1s;
+    -o-animation-delay: 1s;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+}
+
+.delay-long {
+    -moz-animation-delay: 2s;
+    -o-animation-delay: 2s;
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+}
+
+.demo {
+    width: 100%;
+    height: 600px;
+    border: 1px solid white;
+}
+
+.fin-code {
+    height: 200px;
+}
+
+@media print {
+    .picture {
+        display: none;
+    }
+
+    .demo {
+        display: none;
+    }
+}
+
+@media not print {
+    #home {
+        padding-top: 30px;
+    }
+
+    section {
+        padding: 50px 0;
+    }
+
+    div[data-animation] {
+        visibility: hidden;
+    }
+}
